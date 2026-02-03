@@ -4,9 +4,13 @@ $secondary-color:#e98f08;
 $element-color: #d31313;
 $font-stack: Helvetica,
 sans-serif;
+$text-main: Arial,
+sans-serif;
+$text-fantasy: Papyrus,
+sans-serif;
 $color-light: #fff;
 $btn-color: #33CCCC;
-$lightened-color: color.scale($btn-color, $lightness:20%);
-$darkened-color: color.scale($btn-color, $lightness:-20%);
+$lightened-color: color.scale($btn-color, $lightness:5%);
+$darkened-color: color.scale($btn-color, $lightness:-50%);
 $complement-color: color.complement($element-color);
 $complement2-color: color.complement($secondary-color);

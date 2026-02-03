@@ -10,6 +10,7 @@
 
 <body>
     <header>
+        <span>Laboration 3</span>
         <nav>
             <ul>
                 <li><a href="index.html">Startsida</a></li>
@@ -20,14 +21,22 @@
             </ul>
         </nav>
     </header>
-    <h1>En hemsida skapad genom CSS-preprocessor SASS. </h1>
-    <h2>För- och nackdelar med SASS:</h2>
-    <ul>
-        <li>Jag tyckte det var enkelt att komma igång. Jag gjorde på samma vis som tidigare uppgifter. Skapade en grund genom npm create vite@latest och fördelning av filer inom huvudmappen. Exempelvis node_modules till .gitignore samt vite.config.js med
-            övriga sidor också vidare. </li>
-        <li>Jag skapade Sass-fil genom npm install sass --save-dev.</li>
-        <li></li>
-    </ul>
+    <main>
+        <section class=sass-section>
+            <h1>För- och nackdelar med SASS</h1>
+            <ul>
+                <li>Jag tyckte det var enkelt att komma igång. Jag gjorde på samma vis som tidigare uppgifter. Skapade en grund genom npm create vite@latest och fördelning av filer inom huvudmappen. Exempelvis node_modules till .gitignore samt vite.config.js
+                    med övriga sidor också vidare. </li>
+                <li>Jag skapade Sass-fil genom npm install sass --save-dev.</li>
+                <li>I början upplevde jag det lite krångligt med SASS. Men efter ett tag blev det enklare. Jag kunde relatera till tidigare uppgifter där jag skapat flera olika btns med samma grundinställning. Genom Sass insåg jag att det denna process går
+                    att förenkla.
+                    <li>Tidigare arbeten kände jag ibland att det blev ostrukturerat med alla regler inom en enda CSS-fil. Över lag fungerar det bra inom mindre hemsidor men vid större webbplatser blir det krångligt. Det är smart att kunna ha olika komponenter
+                        som knappar i en scss-fil medan layouter till sidorna i en annan fil, samt variabler i en tredje exempelvis. </li>
+                    <li>Att experimentera med color.complement samt color.scale tyckte jag var roligt. Det är snyggt när hover-effekten läggs på genom att dra ned eller höja ljusstyrkan genom scale. Samtidigt som det med complement går att hitta färgscheman
+                        som passar väl ihop med varandra.</li>
+            </ul>
+        </section>
+    </main>
     <script type="module" src="/src/js/main.js"></script>
 </body>
 

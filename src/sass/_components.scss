@@ -1,12 +1,16 @@
 @use "abstracts/variables";
-.btn-darkened {
-    position: relative;
+%btn {
     background-color: variables.$primary-color;
     color: variables.$color-light;
     border-radius: 8px;
     padding: 6px 12px;
     cursor: pointer;
     transition: background-color .3s;
+    font-weight: 600;
+}
+
+.btn-darkened {
+    @extend %btn;
     &:hover {
         background-color: variables.$darkened-color;
     }
