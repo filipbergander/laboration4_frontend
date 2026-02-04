@@ -9,9 +9,9 @@
     padding: 0.5rem;
 }
 
-%btn {
-    background-color: variables.$primary-color;
-    color: variables.$color-light;
+@mixin btn ($bg, $color) {
+    background-color: $bg;
+    color: $color;
     border-radius: 8px;
     padding: 6px 12px;
     cursor: pointer;
@@ -20,7 +20,7 @@
 }
 
 .btn-darkened {
-    @extend %btn;
+    @include btn(variables.$primary-color, variables.$color-light);
     &:hover {
         background-color: variables.$darkened-color;
     }
