@@ -5,4 +5,6 @@ En laboration inom CSS-preprocessor där jag skapar kod genom SCSS/Sass iställe
 Inom uppgiften använde jag:
 - Variabler, color functions, mixins, nesting av kod, @extend, @if/else. 
 
+Avslutningsvis innan jag slutförde uppgiften använde jag kommandot npm run build för att automatisera och minimera filerna inom mitt dokument. Sedan merge till main för publicering till hemsida.
+
 Webbplats: https://lab3frontend-fb.netlify.app/
