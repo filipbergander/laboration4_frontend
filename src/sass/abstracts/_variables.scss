@@ -10,7 +10,6 @@ $text-main: Arial,
 sans-serif;
 $text-fantasy: Papyrus,
 sans-serif;
-$color-light: #fff;
 $btn-color: #33CCCC;
 $lightened-color: color.scale($btn-color, $lightness:5%);
 $darkened-color: color.scale($btn-color, $lightness:-50%);

@@ -20,13 +20,19 @@
     font-weight: 600;
 }
 
+@media (prefers-color-scheme: dark) {
+    .btn-darkened {
+        background-color: $light-color;
+    }
+}
+
 .btn-darkened {
-    @include btn($primary-color, $color-light);
+    @include btn($primary-color, $light-color);
     &:hover {
         background-color: $darkened-color;
     }
     &.dark {
-        background-color: $color-light;
+        background-color: $light-color;
         color: $primary-color;
     }
     &.dark:hover {
@@ -38,7 +44,7 @@
     display: none;
     @extend %menu;
     span {
-        color: black;
+        color: $dark-color;
     }
 }
 
@@ -46,7 +52,7 @@
     display: none;
     @extend %menu;
     span {
-        color: white;
+        color: $light-color;
     }
 }
 
