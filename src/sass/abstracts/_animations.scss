@@ -1,0 +1,43 @@
+@use "variables" as *; // Lagt till as * För att slippa skriva variables innan.
+.icons {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.thumbs-up {
+    transition: .3s ease;
+    &:hover {
+        fill: $complement-color;
+    }
+    &:active {
+        transform: translateY(-10px);
+    }
+}
+
+.thumbs-down {
+    background: linear-gradient(270deg, $complement-color, $complement2-color, $element-color, $icons-red);
+    background-size: 500% 500%;
+    animation: gradientShift 6s ease infinite;
+    border-radius: 8px;
+    transition: .3s ease;
+    &:hover {
+        fill: $icons-red;
+    }
+    &:active {
+        transform: translateY(10px);
+        box-shadow: 0px 0px 5px 5px $light-color;
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -11,6 +11,7 @@ sans-serif;
 $text-fantasy: Papyrus,
 sans-serif;
 $btn-color: #33CCCC;
+$icons-red: rgb(180, 54, 54);
 $lightened-color: color.scale($btn-color, $lightness:5%);
 $darkened-color: color.scale($btn-color, $lightness:-50%);
 $complement-color: color.complement($element-color);
