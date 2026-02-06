@@ -34,6 +34,14 @@
             }
         }
         
+        .show {
+            display: block
+        }
+        
+        .unshow {
+            display: none;
+        }
+        
         footer {
             @extend %flex-layout;
             font-family: $text-fantasy;
@@ -192,6 +200,10 @@
         }
         
         .grass-pic.unshow {
+            display: none;
+        }
+        
+        #girona-pic.unshow {
             display: none;
         }
         

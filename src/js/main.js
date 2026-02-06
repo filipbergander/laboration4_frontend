@@ -10,13 +10,13 @@ const skuleTextEl = document.getElementById("skule-text"); // Text till bilden f
 const gironaTextEl = document.getElementById("girona-text"); // Text till bilden för Girona'
 const iconsEl = document.getElementById("icons"); // Text till bilden för Girona
 const btnRestartEl = document.getElementById("btn-restart"); // För att starta om demonstrationen
-const headlineEl = document.getElementById("headline");
+const headlineEl = document.getElementById("headline"); // Rubriken
 
 
 
-const toggleBtn = document.getElementById("btn-menu");
+const toggleBtn = document.getElementById("btn-menu"); // Knappen för att öppna hamburgermeny
 
-const closeBtn = document.getElementById("btn-close");
+const closeBtn = document.getElementById("btn-close"); // Knappen för att stänga hamburgermeny
 
 const menuArea = document.getElementById("nav-menu");
 

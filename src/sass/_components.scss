@@ -26,6 +26,14 @@
     }
 }
 
+.unshow {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 .btn-darkened {
     @include btn($primary-color, $light-color);
     &:hover {
@@ -57,14 +65,20 @@
 }
 
 .btn-moving {
+    position: absolute;
+    animation: moveAround 6s linear infinite;
     @include btn($btn-color, $dark-color);
     &:hover {
         background-color: $light-color;
     }
 }
 
-.unshow {
-    display: none;
+.btn-restart {
+    @include btn($forest-color, $light-color);
+    &:hover {
+        background-color: $light-color;
+        color: $dark-color;
+    }
 }
 
 .loading-spin {
