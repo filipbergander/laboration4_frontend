@@ -2,7 +2,9 @@
 import '/src/sass/main.scss';
 
 const btnDemo = document.getElementById("btn-demo"); // Knapp för att starta demonstration inom animeringar
-const loadingSpin = document.getElementById("load-spin");
+const loadingSpin = document.getElementById("load-spin"); // Laddikon
+const imageDisplay = document.getElementById("images-animations"); // Bilder inom animeringar
+
 const toggleBtn = document.getElementById("btn-menu");
 
 const closeBtn = document.getElementById("btn-close");
@@ -40,7 +42,9 @@ if (btnDemo) {
         btnDemo.classList.add("unshow");
         console.log("du klickade på knappen");
         setTimeout(() => {
+            loadingSpin.classList.remove("show")
             console.log("det fungerade");
-        }, 3000);
+            imageDisplay.classList.add("show")
+        }, 2500);
     });
 }

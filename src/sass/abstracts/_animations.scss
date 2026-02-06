@@ -12,7 +12,15 @@
     transition: .3s ease;
 }
 
+.thumbs-down {
+    display: none;
+}
+
 .thumbs-up {
+    display: none
+}
+
+.thumbs-up.show {
     @include thumbs;
     background: linear-gradient(270deg, $complement-color, $complement2-color, $element-color);
     animation: gradientShift 4s ease infinite;
@@ -26,7 +34,7 @@
     }
 }
 
-.thumbs-down {
+.thumbs-down.show {
     @include thumbs;
     background: linear-gradient(270deg, $icons-red, $element-color);
     animation: gradientShift 4s ease infinite;
@@ -46,6 +54,14 @@
     background: conic-gradient($dark-color, $light-color);
     border-radius: 50%;
     animation: spinAnimation 2s linear infinite, gradientShift 3s linear infinite;
+}
+
+.images-animations {
+    display: none;
+}
+
+.images-animations.show {
+    display: block;
 }
 
 @keyframes spinAnimation {
