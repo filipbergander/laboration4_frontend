@@ -1,8 +1,12 @@
 "use strict";
 import '/src/sass/main.scss';
 
+const btnDemo = document.getElementById("btn-demo"); // Knapp för att starta demonstration inom animeringar
+const loadingSpin = document.getElementById("load-spin");
 const toggleBtn = document.getElementById("btn-menu");
+
 const closeBtn = document.getElementById("btn-close");
+
 const menuArea = document.getElementById("nav-menu");
 
 const darkBtn = document.querySelector(".btn-darkened"); // Knapp för att toggla mörkt/ljust tema på startsidan.
@@ -29,3 +33,14 @@ closeBtn.addEventListener("click", () => {
     toggleBtn.classList.remove("close");
     menuArea.classList.remove("show");
 });
+
+if (btnDemo) {
+    btnDemo.addEventListener("click", () => {
+        loadingSpin.classList.add("show");
+        btnDemo.classList.add("unshow");
+        console.log("du klickade på knappen");
+        setTimeout(() => {
+            console.log("det fungerade");
+        }, 3000);
+    });
+}

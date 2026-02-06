@@ -56,6 +56,25 @@
     }
 }
 
+.btn-moving {
+    @include btn($btn-color, $dark-color);
+    &:hover {
+        background-color: $light-color;
+    }
+}
+
+.btn-moving.unshow {
+    display: none;
+}
+
+.loading-spin {
+    display: none;
+}
+
+.loading-spin.show {
+    display: block;
+}
+
 @media (max-width:505px) {
     #btn-menu {
         display: flex;

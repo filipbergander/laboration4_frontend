@@ -1,32 +1,59 @@
 @use "variables" as *; // Lagt till as * För att slippa skriva variables innan.
 .icons {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
+    margin: 0 auto;
+}
+
+@mixin thumbs {
+    border-radius: 6px;
+    padding: 4px 6px;
+    transition: .3s ease;
 }
 
 .thumbs-up {
-    transition: .3s ease;
+    @include thumbs;
+    background: linear-gradient(270deg, $complement-color, $complement2-color, $element-color);
+    animation: gradientShift 4s ease infinite;
+    background-size: 500% 500%;
     &:hover {
         fill: $complement-color;
     }
     &:active {
         transform: translateY(-10px);
+        box-shadow: 0px 0px 5px 5px $light-color;
     }
 }
 
 .thumbs-down {
-    background: linear-gradient(270deg, $complement-color, $complement2-color, $element-color, $icons-red);
+    @include thumbs;
+    background: linear-gradient(270deg, $icons-red, $element-color);
+    animation: gradientShift 4s ease infinite;
     background-size: 500% 500%;
-    animation: gradientShift 6s ease infinite;
-    border-radius: 8px;
-    transition: .3s ease;
     &:hover {
         fill: $icons-red;
     }
     &:active {
         transform: translateY(10px);
-        box-shadow: 0px 0px 5px 5px $light-color;
+        box-shadow: 0px 0px 5px 5px $dark-color;
+    }
+}
+
+.loading-spin {
+    height: 35px;
+    width: 35px;
+    background: conic-gradient($dark-color, $light-color);
+    border-radius: 50%;
+    animation: spinAnimation 2s linear infinite, gradientShift 3s linear infinite;
+}
+
+@keyframes spinAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -39,5 +66,44 @@
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+.water-pic {
+    img {
+        &:active {
+            -webkit-animation: rotate-scale-down-hor 0.5s linear both;
+            animation: rotate-scale-down-hor 0.5s linear both;
+        }
+    }
+}
+
+@-webkit-keyframes rotate-scale-down-hor {
+    0% {
+        -webkit-transform: scale(1) rotateX(0);
+        transform: scale(1) rotateX(0);
+    }
+    50% {
+        -webkit-transform: scale(0.5) rotateX(-180deg);
+        transform: scale(0.5) rotateX(-180deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotateX(-360deg);
+        transform: scale(1) rotateX(-360deg);
+    }
+}
+
+@keyframes rotate-scale-down-hor {
+    0% {
+        -webkit-transform: scale(1) rotateX(0);
+        transform: scale(1) rotateX(0);
+    }
+    50% {
+        -webkit-transform: scale(0.5) rotateX(-180deg);
+        transform: scale(0.5) rotateX(-180deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotateX(-360deg);
+        transform: scale(1) rotateX(-360deg);
     }
 }

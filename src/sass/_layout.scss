@@ -159,6 +159,50 @@
             }
         }
         
+        .images-animations {
+            @extend %flex-layout;
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            margin-top: none;
+            width: 100%;
+            height: auto;
+        }
+        
+        .grass-pic {
+            img {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            p {
+                display: none;
+            }
+        }
+        
+        .grass-pic.unshow {
+            display: none;
+        }
+        
+        .water-pic {
+            img {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            p {
+                display: none;
+            }
+        }
+        
+        .water-pic.unshow {
+            display: none;
+        }
+        
+        .loading-spin {
+            margin-top: 2rem;
+        }
+        
         @media (max-width:950px) {
             .image-area {
                 grid-template-columns: 1fr;
