@@ -4,6 +4,15 @@ import '/src/sass/main.scss';
 const btnDemo = document.getElementById("btn-demo"); // Knapp för att starta demonstration inom animeringar
 const loadingSpin = document.getElementById("load-spin"); // Laddikon
 const imageDisplay = document.getElementById("images-animations"); // Bilder inom animeringar
+const gironaEl = document.querySelector(".grass-pic"); // Bild för Girona
+const skuleEl = document.querySelector(".water-pic"); // Bild för Skuleskogen
+const skuleTextEl = document.getElementById("skule-text"); // Text till bilden för skuleskog
+const gironaTextEl = document.getElementById("girona-text"); // Text till bilden för Girona'
+const iconsEl = document.getElementById("icons"); // Text till bilden för Girona
+const btnRestartEl = document.getElementById("btn-restart"); // För att starta om demonstrationen
+const headlineEl = document.getElementById("headline");
+
+
 
 const toggleBtn = document.getElementById("btn-menu");
 
@@ -46,5 +55,23 @@ if (btnDemo) {
             console.log("det fungerade");
             imageDisplay.classList.add("show")
         }, 2500);
+    });
+}
+
+if (skuleEl && gironaEl) {
+    skuleEl.addEventListener("click", () => {
+        gironaEl.classList.add("unshow");
+        skuleTextEl.classList.add("show");
+        iconsEl.classList.add("show");
+        btnRestartEl.classList.add("show");
+        headlineEl.classList.add("unshow");
+    });
+
+    gironaEl.addEventListener("click", () => {
+        skuleEl.classList.add("unshow");
+        gironaTextEl.classList.add("show");
+        iconsEl.classList.add("show");
+        btnRestartEl.classList.add("show");
+        headlineEl.classList.add("unshow");
     });
 }

@@ -1,9 +1,21 @@
 @use "variables" as *; // Lagt till as * För att slippa skriva variables innan.
+#icons {
+    display: none;
+}
+
+#icons.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
 .icons {
     display: flex;
     gap: 1rem;
-    align-items: center;
     margin: 0 auto;
+    align-items: center;
+    justify-content: center;
 }
 
 @mixin thumbs {
@@ -12,38 +24,30 @@
     transition: .3s ease;
 }
 
-.thumbs-down {
-    display: none;
-}
-
 .thumbs-up {
-    display: none
-}
-
-.thumbs-up.show {
     @include thumbs;
     background: linear-gradient(270deg, $complement-color, $complement2-color, $element-color);
     animation: gradientShift 4s ease infinite;
     background-size: 500% 500%;
     &:hover {
         fill: $complement-color;
+        transform: translateY(-10px);
     }
     &:active {
-        transform: translateY(-10px);
         box-shadow: 0px 0px 5px 5px $light-color;
     }
 }
 
-.thumbs-down.show {
+.thumbs-down {
     @include thumbs;
     background: linear-gradient(270deg, $icons-red, $element-color);
     animation: gradientShift 4s ease infinite;
     background-size: 500% 500%;
     &:hover {
         fill: $icons-red;
+        transform: translateY(10px);
     }
     &:active {
-        transform: translateY(10px);
         box-shadow: 0px 0px 5px 5px $dark-color;
     }
 }
@@ -64,6 +68,14 @@
     display: block;
 }
 
+#skule-pic.unshow {
+    display: none;
+}
+
+#girona-pic.unshow {
+    display: none;
+}
+
 @keyframes spinAnimation {
     0% {
         transform: rotate(0deg);
@@ -82,44 +94,5 @@
     }
     100% {
         background-position: 0% 50%;
-    }
-}
-
-.water-pic {
-    img {
-        &:active {
-            -webkit-animation: rotate-scale-down-hor 0.5s linear both;
-            animation: rotate-scale-down-hor 0.5s linear both;
-        }
-    }
-}
-
-@-webkit-keyframes rotate-scale-down-hor {
-    0% {
-        -webkit-transform: scale(1) rotateX(0);
-        transform: scale(1) rotateX(0);
-    }
-    50% {
-        -webkit-transform: scale(0.5) rotateX(-180deg);
-        transform: scale(0.5) rotateX(-180deg);
-    }
-    100% {
-        -webkit-transform: scale(1) rotateX(-360deg);
-        transform: scale(1) rotateX(-360deg);
-    }
-}
-
-@keyframes rotate-scale-down-hor {
-    0% {
-        -webkit-transform: scale(1) rotateX(0);
-        transform: scale(1) rotateX(0);
-    }
-    50% {
-        -webkit-transform: scale(0.5) rotateX(-180deg);
-        transform: scale(0.5) rotateX(-180deg);
-    }
-    100% {
-        -webkit-transform: scale(1) rotateX(-360deg);
-        transform: scale(1) rotateX(-360deg);
     }
 }
