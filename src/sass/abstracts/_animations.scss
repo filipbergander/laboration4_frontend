@@ -84,6 +84,32 @@
     }
 }
 
+.bee {
+    position: absolute;
+    width: 60px;
+    height: 65px;
+    pointer-events: none;
+    animation: flyingBee 40s linear infinite;
+}
+
+@keyframes flyingBee {
+    0% {
+        right: -10%;
+        top: 90%;
+        transform: rotate(10deg);
+    }
+    50% {
+        right: 60%;
+        top: 45%;
+        transform: rotate(-15deg);
+    }
+    100% {
+        right: 300%;
+        top: 0%;
+        transform: rotate(20deg);
+    }
+}
+
 @keyframes moveAround {
     0% {
         right: 15%;
@@ -137,6 +163,23 @@
         100% {
             right: 18%;
             top: 20%;
+        }
+    }
+    @keyframes flyingBee {
+        0% {
+            right: -10%;
+            top: 40%;
+            transform: rotate(10deg);
+        }
+        50% {
+            right: 60%;
+            top: 20%;
+            transform: rotate(-15deg);
+        }
+        100% {
+            right: 110%;
+            top: 0%;
+            transform: rotate(20deg);
         }
     }
 }
