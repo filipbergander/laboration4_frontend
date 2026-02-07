@@ -79,6 +79,9 @@
 .btn-moving {
     position: absolute;
     animation: moveAround 7s linear infinite;
+    &:hover {
+        animation-play-state: paused;
+    }
 }
 
 @keyframes moveAround {
@@ -87,8 +90,8 @@
         top: 30%;
     }
     50% {
-        right: 70%;
-        top: 15%;
+        right: 60%;
+        top: 20%;
     }
     75% {
         right: 15%;
@@ -118,5 +121,22 @@
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@media (max-width:768px) {
+    @keyframes moveAround {
+        0% {
+            right: 18%;
+            top: 20%;
+        }
+        50% {
+            right: 23%;
+            top: 50%;
+        }
+        100% {
+            right: 18%;
+            top: 20%;
+        }
     }
 }

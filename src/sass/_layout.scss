@@ -188,6 +188,11 @@
             height: auto;
         }
         
+        .images img {
+            width: 75%;
+            height: auto;
+        }
+        
         .grass-pic {
             img {
                 &:hover {
@@ -196,6 +201,8 @@
             }
             p {
                 @extend %text-layout;
+                max-width: 65ch;
+                line-height: 1.4;
             }
         }
         
@@ -223,6 +230,8 @@
             }
             p {
                 @extend %text-layout;
+                max-width: 65ch;
+                line-height: 1.4;
             }
         }
         
@@ -261,6 +270,10 @@
         }
         
         @media (max-width:768px) {
+            .images img {
+                width: 95%;
+                height: auto;
+            }
             h1 {
                 font-size: 1.5rem;
             }
@@ -308,6 +321,12 @@
             main {
                 .sass-section {
                     margin-top: 5rem;
+                }
+            }
+            .images {
+                p {
+                    font-size: 0.9rem;
+                    width: 90%;
                 }
             }
         }
