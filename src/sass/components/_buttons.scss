@@ -1,4 +1,5 @@
-@use "abstracts/variables" as *; // Lagt till as * För att slippa skriva variables innan.
+@use "../abstracts/variables" as *; // Lagt till as * För att slippa skriva variables innan.
+@use "../abstracts/animations" as *; // Lagt till as * För att slippa skriva variables innan.
 %menu {
     background: none;
     border: none;
@@ -10,20 +11,15 @@
     padding: 4px 8px;
 }
 
-@mixin btn ($bg, $color) {
-    background-color: $bg;
-    color: $color;
-    border-radius: 8px;
-    padding: 6px 12px;
-    cursor: pointer;
-    transition: background-color .3s;
-    font-weight: 600;
-}
-
 @media (prefers-color-scheme: dark) {
     .btn-darkened {
         background-color: $light-color;
     }
+}
+
+#nav-menu .current-page {
+    background-color: $icons-red;
+    box-shadow: 0 0 10px 1px black inset;
 }
 
 .unshow {
@@ -32,51 +28,6 @@
 
 .show {
     display: block;
-}
-
-.btn-darkened {
-    @include btn($primary-color, $light-color);
-    &:hover {
-        background-color: $darkened-color;
-    }
-    &.dark {
-        background-color: $light-color;
-        color: $primary-color;
-    }
-    &.dark:hover {
-        background-color: $lightened-color;
-    }
-}
-
-#btn-menu {
-    display: none;
-    @extend %menu;
-    span {
-        color: $dark-color;
-    }
-}
-
-#btn-close {
-    display: none;
-    @extend %menu;
-    span {
-        color: $light-color;
-    }
-}
-
-.btn-moving {
-    @include btn($btn-color, $dark-color);
-    &:hover {
-        background-color: $light-color;
-    }
-}
-
-.btn-restart {
-    @include btn($forest-color, $light-color);
-    &:hover {
-        background-color: $light-color;
-        color: $dark-color;
-    }
 }
 
 .loading-spin {

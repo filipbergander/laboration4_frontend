@@ -1,0 +1,81 @@
+@use "variables" as *; // Lagt till as * För att slippa skriva variables innan.
+@use "../components/buttons" as *; // Lagt till as * För att slippa skriva variables innan.
+@mixin theme($theme) {
+    @if $theme==dark {
+        background: $dark-color;
+        color: $light-color;
+    }
+    @else {
+        background: $light-color;
+        color: $dark-color;
+    }
+}
+
+@mixin thumbs {
+    border-radius: 6px;
+    padding: 4px 6px;
+    transition: .3s ease;
+}
+
+@mixin btn ($bg, $color) {
+    background-color: $bg;
+    color: $color;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color .3s;
+    font-weight: 600;
+}
+
+.btn-darkened {
+    @include btn($primary-color, $light-color);
+    &:hover {
+        background-color: $darkened-color;
+    }
+    &.dark {
+        background-color: $light-color;
+        color: $primary-color;
+    }
+    &.dark:hover {
+        background-color: $lightened-color;
+    }
+}
+
+#btn-menu {
+    display: none;
+    @extend %menu;
+    span {
+        color: $dark-color;
+    }
+}
+
+#btn-close {
+    display: none;
+    @extend %menu;
+    span {
+        color: $light-color;
+    }
+}
+
+.btn-moving {
+    @include btn($btn-color, $dark-color);
+    &:hover {
+        background-color: $light-color;
+    }
+}
+
+.btn-restart {
+    @include btn($forest-color, $light-color);
+    &:hover {
+        background-color: $light-color;
+        color: $dark-color;
+    }
+}
+
+.thumbs-up {
+    @include thumbs;
+}
+
+.thumbs-down {
+    @include thumbs;
+}

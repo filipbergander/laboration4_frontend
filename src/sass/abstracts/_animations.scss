@@ -18,14 +18,7 @@
     justify-content: center;
 }
 
-@mixin thumbs {
-    border-radius: 6px;
-    padding: 4px 6px;
-    transition: .3s ease;
-}
-
 .thumbs-up {
-    @include thumbs;
     background: linear-gradient(270deg, $complement-color, $complement2-color, $element-color);
     animation: gradientShift 4s ease infinite;
     background-size: 500% 500%;
@@ -39,7 +32,6 @@
 }
 
 .thumbs-down {
-    @include thumbs;
     background: linear-gradient(270deg, $icons-red, $element-color);
     animation: gradientShift 4s ease infinite;
     background-size: 500% 500%;

@@ -1,4 +1,4 @@
-        @use "abstracts/variables" as *; // Lagt till as * För att slippa skriva variables innan.
+        @use "../abstracts/variables" as *; // Lagt till as * För att slippa skriva variables innan.
         %flex-layout {
             display: flex;
             align-items: center;

@@ -1,6 +1,7 @@
 @use 'normalize.css/normalize' as *;
-@use "abstracts/variables";
-@use "layout";
-@use "components";
-@use "mixins";
-@use "abstracts/animations";
+@use "./abstracts/variables";
+@use "./layout/layout";
+@use "./components/buttons";
+@use "./base/reset";
+@use "./abstracts/mixins";
+@use "./abstracts/animations";
