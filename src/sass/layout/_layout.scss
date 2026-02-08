@@ -160,6 +160,12 @@
             }
         }
         
+        .section-animations {
+            h1 {
+                margin-bottom: 1rem;
+            }
+        }
+        
         .images-animations {
             @extend %flex-layout;
             display: flex;
@@ -306,9 +312,13 @@
                 }
             }
             .images {
+                img {
+                    width: 100%;
+                }
                 p {
                     font-size: 0.9rem;
-                    width: 90%;
+                    line-height: 1.3;
+                    width: 80%;
                 }
             }
         }
