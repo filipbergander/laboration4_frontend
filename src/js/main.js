@@ -49,10 +49,8 @@ if (btnDemo) {
     btnDemo.addEventListener("click", () => {
         loadingSpin.classList.add("show");
         btnDemo.classList.add("unshow");
-        console.log("du klickade på knappen");
         setTimeout(() => {
             loadingSpin.classList.remove("show")
-            console.log("det fungerade");
             imageDisplay.classList.add("show")
         }, 2500);
     });

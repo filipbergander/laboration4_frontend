@@ -47,9 +47,15 @@
     margin: 2rem 0 1rem;
 }
 
+@media (max-width:950px) {
+    #nav-menu .current-page {
+        color: $light-color;
+    }
+}
+
 @media (max-width:505px) {
     #btn-menu {
-        display: flex;
+        display: flex !important;
         position: absolute;
         flex-direction: column;
         justify-content: center;
@@ -57,7 +63,7 @@
         top: 0;
         right: 0.5rem;
         margin-left: auto;
-        z-index: 30;
+        z-index: 10;
         transition: 0.4s ease-out;
     }
     #btn-menu.close {

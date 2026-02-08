@@ -79,3 +79,21 @@
 .thumbs-down {
     @include thumbs;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $primary-color;
+        color: $light-color;
+        footer {
+            border-top: $border;
+        }
+    }
+    #btn-menu {
+        span {
+            color: $light-color;
+        }
+        svg path {
+            fill: $light-color;
+        }
+    }
+}
