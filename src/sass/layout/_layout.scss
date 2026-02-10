@@ -281,9 +281,23 @@
                 z-index: 15;
                 transform: translateX(100%);
                 transition: left 0.4s ease-in-out;
-                background-color: $primary-color;
+                background-color: $element-color;
                 margin-right: 0;
                 padding: 0;
+            }
+            @media (prefers-color-scheme: dark) {
+                #nav-menu {
+                    background-color: $primary-color;
+                    span {
+                        color: $light-color !important;
+                    }
+                    svg path {
+                        fill: $light-color;
+                    }
+                }
+            }
+            #nav-menu.dark {
+                background-color: $primary-color;
             }
             #nav-menu.show {
                 display: flex;

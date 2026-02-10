@@ -12,13 +12,11 @@ const iconsEl = document.getElementById("icons"); // Text till bilden för Giron
 const btnRestartEl = document.getElementById("btn-restart"); // För att starta om demonstrationen
 const headlineEl = document.getElementById("headline"); // Rubriken
 
-
-
 const toggleBtn = document.getElementById("btn-menu"); // Knappen för att öppna hamburgermeny
 
 const closeBtn = document.getElementById("btn-close"); // Knappen för att stänga hamburgermeny
 
-const menuArea = document.getElementById("nav-menu");
+const menuArea = document.getElementById("nav-menu"); // Navigeringsmenyn
 
 const darkBtn = document.querySelector(".btn-darkened"); // Knapp för att toggla mörkt/ljust tema på startsidan.
 
@@ -28,8 +26,14 @@ if (darkBtn) {
         darkBtn.classList.toggle("dark"); // Lägger till classlist dark på knappen
         if (document.body.classList.contains("dark")) { // Om body.dark finns ändras knappens text
             darkBtn.innerHTML = "Ljust tema"; // Ändrar texten inom knappen
+            toggleBtn.classList.add("dark"); // Lägger till klassen mörk
+            closeBtn.classList.add("dark");
+            menuArea.classList.add("dark");
         } else {
             darkBtn.innerHTML = "Mörkt tema";
+            toggleBtn.classList.remove("dark"); // Tar bort klassen mörk
+            closeBtn.classList.remove("dark");
+            menuArea.classList.remove("dark");
         }
     })
 }

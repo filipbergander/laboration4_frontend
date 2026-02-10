@@ -47,13 +47,16 @@
     span {
         color: $dark-color;
     }
+    svg path {
+        fill: $dark-color;
+    }
 }
 
 #btn-close {
     display: none;
     @extend %menu;
     span {
-        color: $light-color;
+        color: $dark-color;
     }
 }
 
@@ -87,6 +90,12 @@
         footer {
             border-top: $border;
         }
+    }
+    .grass-pic p {
+        background-color: $dark-color;
+    }
+    .water-pic p {
+        background-color: $dark-color;
     }
     #btn-menu {
         span {
