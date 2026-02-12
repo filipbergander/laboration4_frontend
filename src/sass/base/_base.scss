@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *; // Lagt till as * För att slippa skriva variables innan.
+@use "../abstracts/animations" as *;
+@use "../abstracts/mixins" as *;
+@use "../components/buttons" as *; // Lagt till as * För att slippa skriva variables innan.
+.images-animations {
+    display: none;
+}
+
+.images-animations.show {
+    display: block;
+}
+
+#skule-pic.unshow {
+    display: none;
+}
+
+#girona-pic.unshow {
+    display: none;
+}
