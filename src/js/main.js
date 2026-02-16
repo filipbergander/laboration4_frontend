@@ -36,39 +36,39 @@ if (darkBtn) {
             menuArea.classList.remove("dark");
         }
     })
-}
+} /* När ikonen för hamburgermenyn klickas på */
 toggleBtn.addEventListener("click", () => {
     toggleBtn.classList.toggle("close");
     closeBtn.classList.toggle("show");
     menuArea.classList.toggle("show");
 });
-
+/* När ikonen för att stänga hamburgermenyn klickas på */
 closeBtn.addEventListener("click", () => {
     closeBtn.classList.remove("show");
     toggleBtn.classList.remove("close");
     menuArea.classList.remove("show");
 });
-
-if (btnDemo) {
+/* Knappen som finns på sidan animeringar */
+if (btnDemo) { /* Om den finns */
     btnDemo.addEventListener("click", () => {
         loadingSpin.classList.add("show");
         btnDemo.classList.add("unshow");
-        setTimeout(() => {
+        setTimeout(() => { /* En timeout för att visa "laddningsikon" under laddningstiden */
             loadingSpin.classList.remove("show")
             imageDisplay.classList.add("show")
         }, 2500);
     });
 }
-
-if (skuleEl && gironaEl) {
-    skuleEl.addEventListener("click", () => {
+/* Bilderna på sidan animeringar */
+if (skuleEl && gironaEl) { /* Den ska enbart leta på den sidan, eftersom de finns endast där */
+    skuleEl.addEventListener("click", () => { /* Vid klick på bilden till Skuleskogen visas endast tillhörande text */
         gironaEl.classList.add("unshow");
         skuleTextEl.classList.add("show");
         iconsEl.classList.add("show");
         btnRestartEl.classList.add("show");
         headlineEl.classList.add("unshow");
     });
-
+    /* Vid klick på bilden till Girona visas endast tillhörande text */
     gironaEl.addEventListener("click", () => {
         skuleEl.classList.add("unshow");
         gironaTextEl.classList.add("show");
